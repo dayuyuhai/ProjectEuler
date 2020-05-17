@@ -11,7 +11,7 @@ using namespace std;
 int a;
 
 long long find(long long n) {
-	if (n > 32) {
+	if (n > 39) {
 		a = n;
 		return -1;
 	}

@@ -7,7 +7,7 @@
 
 #include<iostream>
 using namespace std;
-#define max_n 10000
+#define max_n 1000
 
 long long p[max_n + 5];
 
@@ -26,10 +26,10 @@ int main() {
 	int flag = 0;
 	for (i = 1; i < max_n ; i++) {
 		for (j = i; j < max_n; j++) {
-			if (find(p[i] + p[j]) && find(p[i] + 2 * p[j])) {
-				flag = 1;
-				break;
-			}
+			int flag = 1;
+			flag = flag && (find(p[i] + p[j]));
+			flag = flag && (find(p[i] + 2 * p[j]));
+			if (flag) break;
 		}
 		if (flag) {
 			cout << p[i] << endl;
