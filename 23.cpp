@@ -32,7 +32,6 @@ int main() {
 		flag = 1;
 		for (int j = 12; j < i; j++) {
 			if (f[j] > j && f[i - j] > (i - j)) {
-				cout << i << endl;
 				flag = 0;
 				break;
 			}
